@@ -1,0 +1,79 @@
+---
+layout: base__page_sidebar_8x4_nav
+---
+
+{% assign people = site.data.staff %}
+{% assign accordion = page.accordion %}
+
+<!-- SECTION -->
+<section class="section">
+
+	<!-- WYSIWYG -->
+	<div class="wysiwyg mb-5">
+		{{ content | markdownify }}
+	</div>
+
+	<hr class="mb-4 pb-1">
+
+	<!-- ACCORDION STARTS HERE -->
+	<h3 class="mb-4">
+		Accordion Component
+	</h3>
+
+	<!-- 1/2. ACCORDION CONTENTS NAV -->
+	<nav class="mb-5">
+		{% for item in accordion %}
+
+			<!-- CONTENTS ANCHOR -->
+			<div id="contents-{{ item.title | slugify }}">
+				<a href="#{{ item.title | slugify }}" class="btn btn-hero btn-block btn-hero btn-accordion">
+					<span>{{ item.title }}</span>
+					<i class="fa fa-angle-down"></i>
+				</a>
+			</div>
+		{% endfor %}
+	</nav>
+
+	<!-- 2/2. ACCORDION CONTENTS -->
+	{% for item in accordion %}
+		<section id="{{ item.title | slugify }}" class="wysiwyg mb-1 pb-1">
+
+			<!-- HEADING -->
+			<h2 class="d-flex mb-3">
+				<span>{{ item.title }}</span>
+
+				<!-- BACK UP -->
+				<a href="#contents-{{ item.title | slugify }}" class="btn-up ml-auto">
+					<i class="fa fa-angle-up"></i>
+				</a>
+			</h2>
+
+			<!-- BODY -->
+			{{ item.body | markdownify }}
+		</section>
+	{% endfor %}
+
+	<hr class="mb-4 pb-1">
+
+	<!-- HEADING -->
+	<h4 class="mb-4 pb-1">
+		Our Personal Compensation Law Team
+	</h4>
+
+	<!-- PEOPLE -->
+	<ul class="block-grid-xs-1 block-grid-md-3 block-grid-lg-2 block-grid-xxl-3 is-condensed-more">
+		{% for item in people limit: 6 %}
+			<li>
+				{% include components/media/media_btn.html %}
+			</li>
+		{% endfor %}
+	</ul>
+
+</section>
+
+{% contentfor content_additional %}
+
+	{% include sections/section_blog_latest_minimal.html %}
+
+	{% include sections/section_contact.html %}
+{% endcontentfor %}

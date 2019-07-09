@@ -1,0 +1,132 @@
+{
+    "Home": {
+        "url": "/",
+    },
+    "About": {
+        "alias": "about-us",
+        "url": "/about/",
+        "children_excluded_from_nav": false,
+        "children": {
+            "Why Choose Us?": {
+                "url": "/about/about-item/",
+            },
+            "Equitable Briefing Policy": {
+                "url": "/about/about-item/",
+            },
+            "How We Charge": {
+                "url": "/about/about-item/",
+            },
+            "Reviews": {
+                "url": "/about/about-item/",
+            },
+            "Community Support": {
+                "url": "/about/about-item/",
+            }
+        }
+    },
+    "Team": {
+        "url": "/team/",
+        "children_excluded_from_nav": false,
+        "children": {
+            "Sarah Ford": {
+                "url": "/team/team-item/",
+            }
+        }
+    },
+    "Services": {
+        "url": "/services/",
+        "children_excluded_from_nav": false,
+        "children": {
+            "Criminal Defence": {
+                "url": "/services/services-item/",
+                "image": "/assets/img/content/practice-area-thumbs/thumb-01@2x.jpg",
+                "description": "",
+                "children_excluded_from_nav": false,
+                "children": {
+                    "Assaults and Offences of Violence *": {
+                        "url": "/services/services-item/services-item/",
+                        "description": ""
+                    },
+                    "Child Safety and Welfare *": {
+                        "url": "/services/services-item/services-item/",
+                        "description": ""
+                    },
+                    "Confiscation of Proceeds *": {
+                        "url": "/services/services-item/services-item/",
+                        "description": ""
+                    },
+                    "Drug Offences *": {
+                        "url": "/services/services-item/services-item/",
+                        "description": ""
+                    },
+                    "Fraud and Dishonesty *": {
+                        "url": "/services/services-item/services-item/",
+                        "description": ""
+                    },
+                    "Sexual Offences *": {
+                        "url": "/services/services-item/services-item/",
+                        "description": ""
+                    },
+                    "Social Health and Safety *": {
+                        "url": "/services/services-item/services-item/",
+                        "description": ""
+                    },
+                    "Weapons (Firearms Licencing) *": {
+                        "url": "/services/services-item/services-item/",
+                        "description": ""
+                    },
+                    "Work Health and Safety *": {
+                        "url": "/services/services-item/services-item/",
+                        "description": ""
+                    }
+                }
+            },
+            "Coronial Inquests": {
+                "url": "/services/services-item/",
+                "image": "/assets/img/content/practice-area-thumbs/thumb-01@2x.jpg",
+                "description": "",
+                "children_excluded_from_nav": false,
+                "children": {}
+            },
+            "Corporate Crime": {
+                "url": "/services/services-item/",
+                "image": "/assets/img/content/practice-area-thumbs/thumb-01@2x.jpg",
+                "description": "",
+                "children_excluded_from_nav": false,
+                "children": {}
+            },
+            "Professional Misconduct": {
+                "url": "/services/services-item/",
+                "image": "/assets/img/content/practice-area-thumbs/thumb-01@2x.jpg",
+                "description": "",
+                "children_excluded_from_nav": false,
+                "children": {}
+            },
+            "Traffic": {
+                "url": "/services/services-item/",
+                "image": "/assets/img/content/practice-area-thumbs/thumb-01@2x.jpg",
+                "description": "",
+                "children_excluded_from_nav": false,
+                "children": {}
+            }
+        }
+    },
+    "Blog": {
+        "url": "/blog/",
+        "children_excluded_from_nav": false,
+        "classes": "is-right-aligned",
+        "children": {
+            "Blog Post": {
+                "url": "/blog/blog-item/"
+            }
+        }
+    },
+    "Contact": {
+        "url": "/contact/",
+        "children_excluded_from_nav": true,
+        "children": {}
+    },
+    #"Search": {
+    #    "url": "#/search/"
+    #}
+}

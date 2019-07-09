@@ -1,0 +1,28 @@
+---
+layout: base__page
+---
+
+{% assign settings = site.data.settings %}
+
+<!-- SECTION -->
+<section class="section">
+    <div class="container">
+
+        <!-- HEADING -->
+        <h2 class="mb-md-4">
+            South Australia Offices
+        </h2>
+
+        <!-- OFFICES -->
+        <ul class="mb-0 block-grid-xs-1 block-grid-md-2 block-grid-lg-3">
+            {% for item in settings.offices['sa'] %}
+                <li class="wow fadeIn">
+                    {% include components/content/contact_box.html %}
+                </li>
+            {% endfor %}
+        </ul>
+
+    </div>
+</section>
+
+{% include sections/section_contact_centered.html %}

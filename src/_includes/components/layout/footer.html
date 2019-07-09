@@ -1,0 +1,146 @@
+{% assign settings = site.data.settings %}
+{% assign logo = page.logo | default: "/assets/img/content/logo--white@2x.png" %}
+{% assign qld_office = settings.offices['qld'][0] %}
+{% assign sitemap = site.data.sitemap %}
+
+<!-- FOOTER BODY -->
+<section class="global-footer-body">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-md-4 col-lg-3">
+
+				<!-- LOGO -->
+				<div class="mb-5 mb-md-0">
+					<a class="logo d-inline-block" href="/" title="{{ settings.title_homepage }}" itemprop="url">
+					    <img width="100%" src="{{ logo }}" alt="{{ settings.company }}" itemprop="logo">
+					</a>
+				</div>
+
+			</div>
+			<div class="col-md-8 col-lg-9">
+
+				<!-- PHONE -->
+				<p class="mb-1">
+                    <a class="d-inline-flex align-items-center" href="tel:{{ qld_office.phone }}">
+                        <i class="fa fa-phone mr-2"></i>
+                        <span class="text">{{ qld_office.phone }} (24 hours)</span>
+                    </a>
+                </p>
+
+				<!-- EMAIL -->
+				<p class="mb-1">
+                    <a class="d-inline-flex align-items-center" href="mailto:{{ qld_office.email }}">
+                        <i class="fa fa-envelope mr-2"></i>
+                        <span class="text">{{ qld_office.email }}</span>
+                    </a>
+                </p>
+
+				<!-- ADDRESS -->
+				<p class="mb-3 mb-md-0">
+					<a class="d-inline-flex align-items-start" href="/contact/">
+                        <i class="fa fa-map-marker mr-2"></i>
+                        <span class="text"><span class="mr-1">{{ qld_office.address | strip_html }}</span><i class="d-inline fa fa-angle-right"></i></span>
+                    </a>
+                </p>
+
+			</div>
+		</div>
+
+		{% comment %}
+		<div class="col-md-4 d-flex justify-content-md-end">
+			{% include components/widgets/social_media.html %}
+		</div>
+		{% endcomment %}
+
+	</div> <!-- /.container -->
+
+</section>
+
+<!-- FOOTER BOTTOM -->
+<section class="global-footer-bottom">
+    <div class="container">
+
+    	<!-- BACK TO TOP -->
+    	<div class="text-center text-md-right hidden-xs-down">
+    		<button data-back-top class="btn-back-top">
+    			<div>
+    				<i class="d-block fa fa-angle-up"></i>
+    				<span class="text">TOP</span>
+    			</div>
+    		</button>
+    	</div>
+
+		<div class="row">
+			<div class="col-6">
+
+				{% comment %}
+				<!-- COPYRIGHT -->
+				<span class="mr-2">
+					&copy; {{ site.time | date: '%Y' }}
+					<span class="text hidden-md-down">{ { settings.company }}</span>
+				</span>
+				{% endcomment %}
+
+				<!-- SITEMAP -->
+				<a class="mr-2" href="#sitemap" data-sitemap-trigger>
+					<i class="fa fa-angle-down"></i>
+					Site Map
+				</a>
+
+				<!-- EXTRA LINKS (OPTIONAL) -->
+				<!-- <a class="mr-2" href="#">Terms &amp; Conditions</a> -->
+				<!-- <a class="mr-2" href="#">Privacy Policy</a> -->
+
+				<!-- SPACER -->
+				<div class="spacer mb-2 hidden-md-up"></div>
+
+			</div>
+			<div class="col-6 text-right">
+
+				<!-- AUTHOR LOGO -->
+				<small>
+					<a class="author-logo" target="_blank" href="{{ settings.author.url }}">
+				    	<span class="text mr-2 text-uppercase">{{ settings.author.description }}</span>
+				    	<img width="20" height="20" src="{{ settings.author.logo }}" alt="Created by {{ settings.author.title }}">
+					</a>
+				</small>
+
+			</div>
+		</div>
+    </div>
+</section>
+
+<!-- FOOTER SITEMAP -->
+<section id="sitemap" class="global-footer-sitemap is-collapsed" data-sitemap>
+	<div class="container">
+		<ul class="block-grid-xs-1 block-grid-lg-5">
+
+			{% for item in site.data.sitemap offset: 1 %}
+				<li>
+					<a href="{{ item[1].url }}">
+						<h5>{{ item[0] }}</h5>
+					</a>
+					{% if item[1].children %}
+						<ul class="list-unstyled">
+							{% for item in item[1].children %}
+								<li>
+									<a href="{{ item[1].url }}">{{ item[0] }}</a>
+									{% if item[1].children %}
+										<ul>
+											{% for item in item[1].children %}
+												<li>
+													<a href="{{ item[1].url }}">{{ item[0] }}</a>
+												</li>
+											{% endfor %}
+										</ul>
+									{% endif %}
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+				</li>
+			{% endfor %}
+
+		</ul>
+	</div>
+</section>

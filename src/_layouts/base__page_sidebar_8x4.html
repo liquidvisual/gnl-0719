@@ -1,0 +1,22 @@
+---
+layout: base
+---
+
+<!-- MAIN BODY -->
+<main class="main-body">
+	<div class="container">
+	    <div class="row">
+	        <div class="col-lg-8">
+	        	{{ content }}
+	        </div>
+	        <div class="col-lg-4">
+				<aside class="sidebar ml-auto" style="max-width: 390px">
+
+					{% contentblock sidebar no-convert %}
+				</aside>
+	        </div>
+	    </div>
+	</div>
+
+	{% contentblock content_additional no-convert %}
+</main>

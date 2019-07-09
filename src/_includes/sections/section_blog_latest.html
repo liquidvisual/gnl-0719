@@ -1,0 +1,41 @@
+{% assign settings = site.data.settings %}
+{% assign au_office = settings.offices['aus'][0] %}
+{% assign bg_image = include.bg_image | default: '' %}
+{% assign parallax_enabled = include.parallax_enabled | default: false %}
+
+<!-- LATEST FROM THE BLOG -->
+<section
+	class="section section-blog"
+	style="background-image: url({{ bg_image }})">
+
+	{% if parallax_enabled %}
+		<!-- PARALLAX (OPTIONAL) -->
+		{% include components/hero/hero__parallax_plugin.html image=bg_image %}
+	{% endif %}
+
+	<div class="container wow fadeIn">
+
+		<!-- HEADER -->
+		<header class="mb-4">
+			<div class="row align-items-center">
+				<div class="col-md-6">
+
+					<!-- HEADING -->
+					<h2 class="text-uppercase">
+						Latest Blogs &amp; News
+					</h2>
+
+				</div>
+				<div class="col-md-6 text-md-right">
+
+					<!-- MORE BLOG POSTS -->
+					<a class="text-uppercase ml-auto" href="/blog/">More Blogs &amp; News <i class="fa fa-angle-right"></i></a>
+
+				</div>
+			</div>
+		</header>
+
+		{% include components/cards/cards.html flat="" columns=4 %}
+
+	</div>
+</section>
