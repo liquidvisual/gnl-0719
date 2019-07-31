@@ -1,89 +1,40 @@
 ---
-layout: base__page_sidebar_8x4_nav
+layout: base__page_sidebar_7x5_nav
 ---
 
-{% assign people = site.data.staff %}
-{% assign accordion = page.accordion %}
-{% assign services = site.data.sitemap['Services'].children['Criminal Defence'].children %}
+<!-- LEAD -->
+<p class="lead mb-4">
+	{{ page.lead }}
+</p>
 
-<!-- SECTION -->
-<section class="section pb-0">
+<!-- WYSIWYG -->
+<div class="wysiwyg mb-4">
+	{{ content }}
+</div>
 
-	<!-- LINKS TEMPLATE (OPTIONAL) -->
-	<div class="mb-4 pb-1">
-		<p class="mb-1">
-			<a class="btn btn-block side-btn text-left" href="/practice-areas/practice-areas-item/practice-areas-item/">
-				<i class="fa fa-file-pdf-o icon mr-2"></i>
-				<span class="text">
-					<strong>Personal Injury Guide</strong>
-					<br>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-				</span>
-				<i class="ml-auto fa fa-angle-right"></i>
-			</a>
-		</p>
-		<p class="mb-1">
-			<a class="btn btn-block side-btn text-left" href="/practice-areas/practice-areas-item/practice-areas-item/">
-				<i class="fa fa-file-pdf-o icon mr-2"></i>
-				<span class="text">
-					<strong>Infographic - Personal Injury</strong>
-				</span>
-				<i class="ml-auto fa fa-angle-right"></i>
-			</a>
-		</p>
-	</div>
-
-	{% comment %}
-	<!-- IMAGE -->
-	<p class="img-right">
-	    <img style="max-width: 400px" src="/assets/img/content/blog-thumbs/thumb-01.jpg" alt="...">
+<!-- LINKS TEMPLATE (OPTIONAL) -->
+<div>
+	<p class="mb-1">
+		<a class="btn btn-block side-btn text-left" href="#">
+			<i class="fa fa-file-pdf-o icon mr-2"></i>
+			<span class="text">
+				<strong>Download link example</strong>
+			</span>
+			<i class="ml-auto fa fa-angle-right"></i>
+		</a>
 	</p>
-	{% endcomment %}
-
-	<!-- WYSIWYG -->
-	<div class="wysiwyg mb-5">
-		{{ content | markdownify }}
-	</div>
-
-	{% comment %}
-	<!-- SERVICES -->
-	{% for item in services %}
-		<p class="mb-1">
-			<a class="btn btn-block side-btn text-left" href="/practice-areas/practice-areas-item/practice-areas-item/">
-				<span class="text">
-					<strong>{{ item[0] }}</strong>
-					<br>
-					{{ item[1].description }}
-				</span>
-				<i class="ml-auto fa fa-angle-right"></i>
-			</a>
-		</p>
-	{% endfor %}
-	{% endcomment %}
-
-</section>
-
-<!-- PEOPLE -->
-<section class="section pb-0 pb-lg-5 mb-lg-4 wow fadeIn">
-
-	<!-- HEADING -->
-	<h4 class="mb-4 pb-1">
-		Our Personal Injury Team
-	</h4>
-
-	<!-- PEOPLE -->
-	<ul class="block-grid-xs-1 block-grid-md-3 block-grid-lg-2 block-grid-xxl-3 is-condensed-more">
-		{% for item in people limit: 6 %}
-			<li>
-				{% include components/media/media_btn.html %}
-			</li>
-		{% endfor %}
-	</ul>
-</section>
+	<p class="mb-1">
+		<a class="btn btn-block side-btn text-left" href="#">
+			<i class="fa fa-file-pdf-o icon mr-2"></i>
+			<span class="text">
+				<strong>Download link example</strong>
+			</span>
+			<i class="ml-auto fa fa-angle-right"></i>
+		</a>
+	</p>
+</div>
 
 {% contentfor content_additional %}
-
-	{% include sections/section_blog_latest_minimal.html %}
-
-	{% include sections/section_contact.html %}
+	{% include sections/section_cta.html %}
+	{% include sections/section_blog_latest.html title="Blogs - Criminal Defence" %}
 {% endcontentfor %}

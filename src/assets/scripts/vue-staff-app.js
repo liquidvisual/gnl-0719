@@ -4,6 +4,11 @@
     NOTES:
         - https://codepen.io/liquidvisual/pen/ErNNbZ?editors=1011
         - https://stackoverflow.com/questions/6913512/how-to-sort-an-array-of-objects-by-multiple-fields
+
+        <!-- build:js({src,.}) /assets/scripts/vue.js -->
+        <script src="/node_modules/vue/dist/vue{% unless site.environment == 'development' %}.min{% endunless %}.js"></script>
+        <!-- endbuild -->
+        <script>Vue.config.productionTip = false;</script>
 */
 //-----------------------------------------------------------------
 // VARIABLES

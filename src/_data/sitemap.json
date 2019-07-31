@@ -3,7 +3,6 @@
         "url": "/",
     },
     "About": {
-        "alias": "about-us",
         "url": "/about/",
         "children_excluded_from_nav": false,
         "children": {
@@ -24,107 +23,90 @@
             }
         }
     },
-    "Team": {
-        "url": "/team/",
-        "children_excluded_from_nav": false,
-        "children": {
-            "Sarah Ford": {
-                "url": "/team/team-item/",
-            }
-        }
-    },
     "Services": {
         "url": "/services/",
         "children_excluded_from_nav": false,
         "children": {
             "Criminal Defence": {
                 "url": "/services/services-item/",
-                "image": "/assets/img/content/practice-area-thumbs/thumb-01@2x.jpg",
-                "description": "",
                 "children_excluded_from_nav": false,
                 "children": {
-                    "Assaults and Offences of Violence *": {
-                        "url": "/services/services-item/services-item/",
-                        "description": ""
+                    "Sexual Offences": {
+                        "url": "/services/services-item/services-item/"
                     },
-                    "Child Safety and Welfare *": {
-                        "url": "/services/services-item/services-item/",
-                        "description": ""
+                    "Drug Offences": {
+                        "url": "/services/services-item/services-item/"
                     },
-                    "Confiscation of Proceeds *": {
-                        "url": "/services/services-item/services-item/",
-                        "description": ""
+                    "Weapons (Firearms Licencing)": {
+                        "url": "/services/services-item/services-item/"
                     },
-                    "Drug Offences *": {
-                        "url": "/services/services-item/services-item/",
-                        "description": ""
+                    "Assaults and Offences of Violence": {
+                        "url": "/services/services-item/services-item/"
                     },
-                    "Fraud and Dishonesty *": {
-                        "url": "/services/services-item/services-item/",
-                        "description": ""
+                    "Fraud and Dishonesty": {
+                        "url": "/services/services-item/services-item/"
                     },
-                    "Sexual Offences *": {
-                        "url": "/services/services-item/services-item/",
-                        "description": ""
+                    "Child Safety and Welfare": {
+                        "url": "/services/services-item/services-item/"
                     },
-                    "Social Health and Safety *": {
-                        "url": "/services/services-item/services-item/",
-                        "description": ""
+                    "Work Health and Safety": {
+                        "url": "/services/services-item/services-item/"
                     },
-                    "Weapons (Firearms Licencing) *": {
-                        "url": "/services/services-item/services-item/",
-                        "description": ""
+                    "Social Health and Safety": {
+                        "url": "/services/services-item/services-item/"
                     },
-                    "Work Health and Safety *": {
-                        "url": "/services/services-item/services-item/",
-                        "description": ""
+                    "Confiscation of Proceeds": {
+                        "url": "/services/services-item/services-item/"
                     }
                 }
             },
-            "Coronial Inquests": {
-                "url": "/services/services-item/",
-                "image": "/assets/img/content/practice-area-thumbs/thumb-01@2x.jpg",
-                "description": "",
-                "children_excluded_from_nav": false,
-                "children": {}
-            },
             "Corporate Crime": {
-                "url": "/services/services-item/",
-                "image": "/assets/img/content/practice-area-thumbs/thumb-01@2x.jpg",
-                "description": "",
-                "children_excluded_from_nav": false,
-                "children": {}
+                "url": "/services/services-item/"
             },
             "Professional Misconduct": {
-                "url": "/services/services-item/",
-                "image": "/assets/img/content/practice-area-thumbs/thumb-01@2x.jpg",
-                "description": "",
-                "children_excluded_from_nav": false,
-                "children": {}
+                "url": "/services/services-item/"
+            },
+            "Coronial Inquests": {
+                "url": "/services/services-item/"
             },
             "Traffic": {
-                "url": "/services/services-item/",
-                "image": "/assets/img/content/practice-area-thumbs/thumb-01@2x.jpg",
-                "description": "",
-                "children_excluded_from_nav": false,
-                "children": {}
+                "url": "/services/traffic/"
+            },
+            "Workplace Investigations": {
+                "url": "/services/services-item/"
+            },
+            "Domestic Violence": {
+                "url": "/services/services-item/"
+            },
+            "Services to Government": {
+                "url": "/services/services-item/"
+            },
+            "Health Professionals' Representation": {
+                "url": "/services/services-item/"
             }
         }
     },
     "Blog": {
         "url": "/blog/",
         "children_excluded_from_nav": false,
-        "classes": "is-right-aligned",
         "children": {
             "Blog Post": {
                 "url": "/blog/blog-item/"
             }
         }
     },
+    "Team": {
+        "url": "/team/",
+        "classes": "is-right-aligned",
+        "children_excluded_from_nav": false,
+        "children": {
+            "Glen Cranny": {
+                "url": "/team/team-item/",
+            }
+        }
+    },
     "Contact": {
         "url": "/contact/",
-        "children_excluded_from_nav": true,
-        "children": {}
     },
     #"Search": {
     #    "url": "#/search/"

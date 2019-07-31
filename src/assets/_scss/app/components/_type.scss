@@ -40,7 +40,7 @@ p, ul, ol, td {
 
 p.lead {
     @include media-breakpoint-down(sm) {
-        font-size: rem-calc(17); // [LOCKED] - curated
+        font-size: rem-calc(27); // [LOCKED] - curated
     }
 }
 

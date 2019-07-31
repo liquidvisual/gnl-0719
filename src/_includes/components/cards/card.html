@@ -18,7 +18,7 @@
 <div class="card h-100 {{ card_options }}">
 
 	<!-- IMAGE -->
-	<a class="btn-tile" href="{{ item.url }}">
+	<a class="btn-tile mb-2" href="{{ item.url }}">
 		<img width="100%" class="card-img-top" src="/assets/img/layout/thumb-sizer--480x288.svg" alt="{{ item.title }}">
 		<span class="btn-tile-bg" style="background-image: url({{ item.image }})"></span>
 	</a>
@@ -40,7 +40,7 @@
 
 		<!-- TITLE -->
 		<a class="text-dark" href="{{ item.url }}">
-			<h3 class="card-title {{ header_class }}">{{ item.title }}</h3>
+			<h3 class="font-weight-bolder card-title {{ header_class }}">{{ item.title }}</h3>
 		</a>
 
 		{% if item.date %}
@@ -51,16 +51,14 @@
 		{% endif %}
 
 		<!-- TEXT -->
-		<div class="card-text mb-2">
+		<div class="card-text mb-5">
 			{{ item.body | truncate: 150 }}
 		</div>
 
 		<!-- BUTTON -->
-		<p>
-			<a href="{{ item.url }}" class="text-uppercase text-link text-secondary">
-				Read more <i class="fa fa-angle-right"></i>
-			</a>
-		</p>
+		<a href="{{ item.url }}" class="text-uppercase btn btn-primary">
+			Read more <i class="fa fa-angle-right ml-auto"></i>
+		</a>
 
 	</div>
 </div>

@@ -1,142 +1,141 @@
 ---
-layout: base__page
+layout: base__page_sidebar_6x6_nav
 ---
 
-{% assign posts = site.data.lorem_ipsum %}
+{% assign settings = site.data.settings %}
 
-<!-- SECTION -->
-<section class="section">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 order-md-last">
+<!-- HEADER -->
+<h1 class="text-uppercase">
+	{{ page.title }}
+</h1>
+
+<!-- POSITION -->
+<h3 class="h4 text-muted mb-4 pb-2">
+	Managing Director
+</h3>
+
+<!-- LEAD -->
+<p class="lead mb-4">
+	{{ page.lead }}
+</p>
+
+<!-- WYSIWYG -->
+<div class="wysiwyg mb-4">
+	{{ content }}
+</div>
+
+{% contentfor sidebar %}
+
+	<!-- PERSONAL DETAILS -->
+	<section>
+
+		<!-- PHOTO -->
+		<p class="mb-1">
+			<img width="100%" src="/assets/img/content/glen-cranny.jpg" alt="Glen Cranny">
+		</p>
+
+		<!-- GET IN TOUCH -->
+		<div class="sidebox mb-1">
+
+			<!-- HEADER -->
+			<h3 class="sidebox-header h5 text-uppercase mb-3">
+				Get in Touch with Glen
+			</h3>
+
+			<!-- BODY -->
+			<div class="sidebox-body">
 				<div class="row">
-					<div class="col-xl-9">
+					<div class="col-xxl-5">
 
-						<!-- HEADER -->
-						<header class="mb-4 pb-1">
-							<h1>Sarah Ford</h1>
-							<h3 class="h4">Associate</h3>
-						</header>
+						<!-- TELEPHONE -->
+						<p class="mb-3">
+						    <a class="d-inline-flex align-items-center" href="tel:0733610240">
+						        <i class="fa fa-phone mr-2"></i>
+						        <span class="text">(07) 3361 0240</span>
+						    </a>
+						</p>
 
-						<!-- PHOTO (MOBILE ONLY) -->
-						<p class="mb-4 hidden-md-up">
-							<img width="100%" src="/assets/img/content/team/sarah-ford@2x.jpg" alt="Sarah Ford">
+						<!-- MOBILE -->
+						<p class="mb-3">
+						    <a class="d-inline-flex align-items-center" href="tel:0401139750">
+						        <i class="fa fa-mobile mr-2"></i>
+						        <span class="text">0401 139 750</span>
+						    </a>
 						</p>
 
 						<!-- EMAIL -->
-	                    <a class="d-inline-flex align-items-center mb-2 mb-md-0" href="mailto:camille@email.com" data-toggle="modal" data-target="#contact-modal">
-	                        <i class="fa fa-envelope mr-2 text-body"></i>
-	                        <span class="text">Send an email</span>
-	                    </a> <span class="mx-2">|</span>
+						<p class="mb-3">
+		                    <a class="d-inline-flex align-items-center" href="mailto:gcranny@gnl.com.au">
+		                        <i class="fa fa-envelope mr-2"></i>
+		                        <span class="text">gcranny@gnl.com.au</span>
+		                    </a>
+		                </p>
 
-	                	<!-- PHONE -->
-	                    <a class="d-inline-flex align-items-center mb-2 mb-md-0" href="tel:0884474911">
-	                        <i class="fa fa-phone mr-2 text-body"></i>
-	                        <span class="text">(08) 8447 4911</span>
-	                    </a> <span class="mx-2 hidden-sm-down">|</span>
+					</div>
+					<div class="col-xxl-7">
 
-	                	<!-- FAX -->
-	                    <a class="d-block d-md-inline-flex align-items-center mb-2 mb-md-0" href="#/LINK-HERE">
-	                        <i class="fa fa-fax mr-2 text-body"></i>
-	                        <span class="text">(08) 8238 6600</span>
-	                    </a>
-
-	                    <hr>
-
-						<!-- LEAD -->
-						<p class="lead mb-4">
-							{{ page.lead }}
+						<!-- LINKED IN -->
+						<p class="mb-3">
+						    <a class="d-inline-flex align-items-center" href="#/LINK-HERE">
+						        <i class="fa fa-linkedin mr-2"></i>
+						        <span class="text">LinkedIn profile</span>
+						    </a>
 						</p>
 
-						<!-- WYSIWYG -->
-						<div class="wysiwyg mb-4">
-							{{ content | markdownify }}
-						</div>
+						<!-- ADDRESS -->
+	    				<p class="mb-0">
+	                        <a class="d-inline-flex align-items-start" href="#/LINK-HERE">
+	                            <i class="fa fa-map-marker mr-2"></i>
+	                            <span class="text">
+	                            	{{ site.data.settings.offices.qld[0].address }}
+	                            </span>
+	                        </a>
+	                    </p>
 
 					</div>
 				</div>
-			</div>
-			<div class="col-md-4">
-
-				<!-- PHOTO (DESKTOP) -->
-				<p class="mb-1 hidden-sm-down">
-					<img width="100%" src="/assets/img/content/team/sarah-ford@2x.jpg" alt="Sarah Ford">
-				</p>
-
-				<!-- AREAS OF EXPERTISE -->
-				<div class="sidebox mb-1">
-
-					<!-- HEADING -->
-					<h3 class="sidebox-header h5 text-uppercase mb-3">
-						Camille's Areas of Expertise
-					</h3>
-
-					<!-- LIST -->
-					<div class="sidebox-body">
-						<ul class="block-grid-xs-1">
-							<li>Children's issues</li>
-							<li>Property settlement</li>
-							<li>Divorce</li>
-							<li>Consent Orders</li>
-							<li>Mediation and Negotiation</li>
-							<li>Recovery and relocation</li>
-							<li>Child abuse matters</li>
-						</ul>
-					</div>
-				</div>
-
-				<!-- SEE BLOG POSTS (OPTIONAL) -->
-				<a href="/blog/" class="btn btn-primary side-btn btn-block text-left">
-					<i class="fa fa-comment icon mr-2"></i> See Blog Posts by Camille
-					<i class="ml-auto fa fa-angle-right"></i>
-				</a>
-
 			</div>
 		</div>
-	</div>
-</section>
+
+		<!-- QUALIFICATIONS -->
+		<div class="sidebox mb-4">
+
+			<!-- HEADER -->
+			<h3 class="sidebox-header h5 text-uppercase mb-3">
+				Qualifications
+			</h3>
+
+			<!-- BODY -->
+			<div class="sidebox-body">
+				<ul class="block-grid-xs-1">
+					<li>- LLB BA Acc. Spec. (Crim) – Qld</li>
+					<li>- Qualification example text here</li>
+				</ul>
+			</div>
+
+		</div>
+	</section>
+{% endcontentfor %}
 
 {% comment %}
-<!-- PEOPLE -->
-<section class="section is-gray wow fadeIn">
-	<div class="container">
+{% contentfor content_additional %}
+	<!-- BLOG POSTS -->
+	<section class="section">
+		<div class="container">
 
-	    <!-- HEADER -->
-	    <header>
-	    	<div class="row align-items-center">
-	    		<div class="col-md-6">
+			<!-- HEADER -->
+			<h2 class="text-uppercase text-center mb-5">
+				Latest Blogs &amp; News - Personal Compensation Law
+			</h2>
 
-	    			<!-- HEADING -->
-	    			<h2 class="text-uppercase mb-2">
-	    				<i class="fa fa-users mr-1"></i> Browse <span class="font-weight-normal">People</span>
-	    			</h2>
+			{% include components/cards/cards.html flat="true" columns=4 %}
 
-	    		</div>
-	    		<div class="col-md-6 text-md-right">
+			<!-- BUTTON -->
+			<p class="text-center mb-0">
+				<a href="#" class="btn btn-secondary">More Blog Articles &nbsp;<i class="fa fa-angle-right"></i></a>
+			</p>
 
-	    			<!-- MORE BLOG POSTS -->
-	    			<a class="text-uppercase ml-auto text-dark" href="/our-people/">View All <i class="fa fa-angle-right"></i></a>
-
-	    		</div>
-	    	</div>
-	    </header>
-
-		<!-- DIVIDER -->
-	    <hr class="mb-5">
-
-		<!-- PEOPLE -->
-		<ul class="block-grid-xs-1 block-grid-md-3 block-grid-xl-4 is-condensed-more mb-4">
-			{% for item in site.data.staff limit: 20 %}
-				<li>
-					{% include components/media/media_btn.html %}
-				</li>
-			{% endfor %}
-		</ul>
-
-	</div>
-</section>
+		</div>
+	</section>
+{% endcontentfor %}
 {% endcomment %}
-
-{% include sections/section_blog_latest_minimal.html %}
-
-{% include components/modals/modal_contact_form.html %}

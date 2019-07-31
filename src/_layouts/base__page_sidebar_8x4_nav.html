@@ -2,53 +2,50 @@
 layout: base
 ---
 
-{% assign sub_nav = site.data.sitemap['Services'].children %}
+{% assign sub_levels = page.subpage_path %}
+{% assign level_1 = sub_levels[0] %}
+{% assign level_2 = sub_levels[1] %}
 
-<!-- MAIN BODY -->
-<main class="main-body">
+{% assign current_level = sub_levels | size %}
+	{% if current_level >= 2 %}
+		{% assign subpages = site.data.sitemap[level_1].children[level_2].children %}
+	{% else %}
+		{% assign subpages = site.data.sitemap[level_1].children %}
+{% endif %}
+
+<!-- SECTION -->
+<section class="section">
 	<div class="container">
 	    <div class="row">
-	        <div class="col-lg-8">
+	        <div class="col-lg-7 col-xl-8 pr-xl-5">
 
-	        	{{ content }}
+				{{ content }}
+
+				<!-- SPACER -->
+				<div class="spacer mb-4 mb-lg-0"></div>
 
 	        </div>
-	        <div class="col-lg-4">
-				<aside class="sidebar ml-auto" style="max-width: 390px">
+	        <div class="col-lg-5 col-xl-4">
 
-					<!-- SIDE NAV  -->
-					<section class="section">
+	        	<!-- SIDEBAR -->
+				<aside class="sidebar">
+
+					{% if subpages %}
+						<!-- SIDE NAV  -->
 						<div class="side-nav is-small mb-4">
-
-							{% if page.side_video %}
-
-								<!-- VIDEO (OPTIONAL) -->
-								<figure data-lightbox-group class="media-thumb media-thumb-muted media-thumb-play">
-									<a class="popup-youtube" href="https://www.youtube.com/watch?v=csmNzXy8cL0" title="Play">
-										<i class="fa fa-youtube-play"></i>
-										<span class="img">
-											<img width="100%" src="http://placehold.it/471x293" alt="...">
-										</span>
-									</a>
-									<figcaption class="media-thumb-caption">
-										Motor Vehicle Accident claims in South Australia
-									</figcaption>
-								</figure>
-
-							{% endif %}
-
-							{% include components/navigation/nav.html data=sub_nav %}
+							{% include components/navigation/nav.html data=subpages %}
 						</div>
-					</section>
+					{% endif %}
 
 					{% contentblock sidebar no-convert %}
+
 				</aside>
 	        </div>
 	    </div>
 	</div>
+</section>
 
-	{% contentblock content_additional no-convert %}
-</main>
+{% contentblock content_additional no-convert %}
 
 <!-- *** FOR WEBVISUAL.COM DEMO PURPOSES ONLY - DELETE ME *** -->
 <script>
@@ -59,9 +56,6 @@ layout: base
 		var li = document.querySelectorAll('.side-nav > ul li');
 
 		li.forEach(function(item) {
-			if (window.location.pathname === '/services/services-item/' && item.dataset.hook !== 'criminal-defence')
-				item.classList.remove('active', 'active-parent');
-
 			if (window.location.pathname === '/services/services-item/services-item/' && item.dataset.hook !== 'drug-offences')
 				item.classList.remove('active');
 		});

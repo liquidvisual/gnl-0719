@@ -1,7 +1,7 @@
 /*
     SIDE-NAV.CSS
 
-    - Last updated: 04.07.19, 13.06.19, 25.03.19, 18.11.16
+    - Last updated: 12.07.19, 13.06.19, 25.03.19, 18.11.16
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -107,10 +107,6 @@
         }
     }
 
-    &.is-small li > a {
-        padding: rem-calc(16 45 12 14); // magic (josefin)
-    }
-
     // ul ul > li > a {
     //     content: "-";
     //     padding: rem-calc(15 34); // indent?
@@ -121,6 +117,38 @@
     //         font-weight: $font-weight-normal;
     //     }
     // }
+
+    //-----------------------------------------------------------------
+    // IS SMALL (second level)
+    //-----------------------------------------------------------------
+
+    // hide all not apart of direct subchildren
+    // &.is-small > ul > li:not(.active-parent) {
+        // display: none;
+    // }
+
+    // hide the 'double' top border
+    &.is-small > ul > li.active-parent {
+        border-top: 0;
+    }
+
+    // hide the very top active parent, just list subchildren
+    // &.is-small > ul > li.active-parent > a {
+        // display: none;
+    // }
+
+    &.is-small li > a {
+        padding: rem-calc(16 50 12 14); // magic (josefin)
+    }
+
+    &.is-small a {
+        font-size: rem-calc(21);
+    }
+
+    &.is-small a:after {
+        top: rem-calc(9);
+        right: rem-calc(14);
+    }
 
     //-----------------------------------------------------------------
     // GENERAL ACTIVE ANCHORS
@@ -135,15 +163,15 @@
         color: $body-color;
         text-transform: uppercase;
 
+        @include media-breakpoint-down(sm) {
+            font-size: rem-calc(21);
+        }
+
         &:hover {
             // color: rgba(white, 0.8);
             // color: lighten($body-color, 30%);
             opacity: 0.8;
         }
-    }
-
-    &.is-small a {
-        font-size: rem-calc(21);
     }
 
     // arrows added to all
@@ -161,11 +189,6 @@
         @include media-breakpoint-down(sm) {
             right: 0 !important;
         }
-    }
-
-    &.is-small a:after {
-        top: rem-calc(9);
-        right: rem-calc(14);
     }
 
     //-----------------------------------------------------------------

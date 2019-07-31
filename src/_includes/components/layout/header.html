@@ -14,20 +14,21 @@
             <div class="col-9 text-right ml-auto">
 
                 <!-- PHONE -->
-                <a href="tel:{{ au_office.phone }}">
+                <a href="tel:{{ qld_office.phone }}">
                     <i class="fa fa-phone"></i>&nbsp;
-                    <span class="text hidden-sm-down">{{ qld_office.phone }} (24 hours)</span>
+                    <span>{{ qld_office.phone }} (24 hours)</span>
                 </a>
 
                 <!-- EMAIL -->
-                <a class="hidden-sm-down" href="mailto:{{ qld_office.email }}">
-                    <i class="fa fa-envelope"></i>&nbsp;  {{ qld_office.email }}
+                <a href="mailto:{{ qld_office.email }}">
+                    <i class="fa fa-envelope"></i>&nbsp;
+                    <span>{{ qld_office.email }}</span>
                 </a>
 
                 <!-- SEARCH (OPTIONAL) -->
                 <!-- <a href="#search" data-search-trigger>
-                    <i class="fa fa-search"></i>
-                    <span class="text hidden-sm-down">&nbsp;Search</span>
+                    <i class="fa fa-search"></i>&nbsp;
+                    <span>Search</span>
                 </a> -->
 
             </div>
@@ -55,7 +56,7 @@
 
         <!-- NAVIGATION -->
         <nav class="global-navigation hidden-lg-down">
-            <div class="lv-topbar">
+            <div class="lv-nav">
                 {% include components/navigation/nav.html data=site.data.sitemap %}
             </div>
         </nav>

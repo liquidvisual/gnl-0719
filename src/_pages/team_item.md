@@ -1,24 +1,20 @@
 ---
 layout: child_layout/team_item
-title:
-title_override:
+title: Glen Cranny
+title_override: ''
 permalink: /team/team-item/
 hero_image: /assets/img/content/backgrounds/bg-07.jpg
 hero_options: is-short is-minimal
 breadcrumbs: true
 breadcrumbs_text:
 lead: |
-  Sarah has practised as a legal practitioner since mid-2013, when she joined Gilshenan & Luton. She previously worked as a Judge’s Associate and for Legal Aid Queensland and the CCC.
+  Glen has specialised in criminal law since 1995 and has been a principal of Gilshenan & Luton since 2000.
 ---
 
-Sarah represents both private clients and regulatory agencies, in defence and prosecution work. In the criminal defence arena, Sarah handles a wide variety of matters, including traffic, drug, domestic violence and assault offences. She also acts for clients facing disciplinary allegations and charges relating to their employment.
+Glen is today recognised as one of the most prominent criminal lawyers in Queensland. Doyle’s Guide to the Legal Profession lists him as a preeminent Queensland and Australian criminal lawyer.
 
-Sarah has had articles published on a variety of topics including private prosecutions and summary complaints and particulars. She is a member of the Queensland Law Society’s Occupational Disciplinary Law Committee, and of the Women’s Legal Association Queensland’s management committee. Sarah is also the criminal law advisor for the WLAQ.
+Glen advises and represents clients in all aspects of criminal law. He also assists professional and business people in relation to disciplinary and regulatory investigations. His areas of expertise include white collar crime, sexual offences, CCC and related investigations and the defence of professional misconduct allegations. He is also very experienced in representing clients in commissions of inquiry, WHS prosecutions and coronial inquests.
 
-Sarah’s interests outside of work include food, travel, exercise, theatre and karaoke.
+Glen was a member of the Queensland Law Society’s inaugural criminal law specialist accreditation committee, and was the Chair of the Law Society’s criminal law section from 2008 to 2014. Glen has published and presented numerous papers on criminal law and related topics. In 2010 Glen was appointed as a Senior Counsellor of the Queensland Law Society. He is a panel member appointed by both the Law Society and the Queensland Bar Association to assist other lawyers with professional complaint matters. Glen was recently awarded the Queensland Law Society President’s Medal for 2019, in recognition of his dedication to community access to justice, law and policy reform, upholding the rule of law and administration of justice for Queenslanders.
 
-
-BJourn LLB(Hons) GradDipLP
-Phone: 07 3361 0248
-Mobile: 0407 245 581
-Email: sford@gnl.com.au
+Glen is married to Lisa, with three daughters. His personal interests include politics (watching, not playing!), music and rugby league.

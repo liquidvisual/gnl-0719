@@ -74,7 +74,7 @@ $header-body-xxl-height: 304px !default; //324px !default;
 	}
 
 	.global-header-body {
-		background: $quaternary; //#9b9ea0;
+		background: $secondary;
 		// transition: all 200ms ease;
 
 		@include media-breakpoint-down(lg) {

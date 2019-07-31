@@ -107,6 +107,10 @@
         }
     }
 
+    &.has-light-gradient {
+        background: linear-gradient(to bottom, #fbfaf9 0%, white 40%);
+    }
+
     &.is-gray { // client request
         @include media-breakpoint-down(sm) {
             padding-top: 0;
@@ -156,7 +160,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(black, 0.6); //rgba(#222, 0.6);
+            background-color: rgba(#181818, 0.20); //rgba(black, 0.6); //rgba(#222, 0.6);
             z-index: 1; // [LOCKED] - for tint over parallax
         }
     }
@@ -168,34 +172,6 @@
     &.is-parallax {
         > .container {
             position: relative; // allow parallax to slink behind
-        }
-    }
-}
-
-//-----------------------------------------------------------------
-//
-//-----------------------------------------------------------------
-
-.section-cta {
-
-    .fa-question-circle {
-        margin-right: rem-calc(44);
-        font-size: rem-calc(80);
-        opacity: 0.4;
-
-        @include media-breakpoint-down(md) {
-            min-width: rem-calc(50);
-        }
-
-        @include media-breakpoint-up(lg) {
-            font-size: rem-calc(125);
-        }
-    }
-
-    .btn .fa {
-
-        @include media-breakpoint-up(lg) {
-            font-size: rem-calc(32);
         }
     }
 }
@@ -225,28 +201,32 @@
 }
 
 //-----------------------------------------------------------------
-// SECTION CONTACT
+// SECTION CTA
 //-----------------------------------------------------------------
 
-.section-contact {
+.section-cta {
 
     // .has-image-bg {
     //     background-position: 10%;
     // }
 
-    .bg-fill.is-white {
-        background-image: linear-gradient(-180deg, darken(#fafafa, 15%) 0%, white 24%);
-    }
+    // .bg-fill.is-white {
+    //     background-image: linear-gradient(-180deg, darken(#fafafa, 15%) 0%, white 24%);
+    // }
 
-    a {
-        @include media-breakpoint-down(md) {
-            font-size: rem-calc(19);
-        }
-    }
+    // a {
+    //     @include media-breakpoint-down(md) {
+    //         font-size: rem-calc(19);
+    //     }
+    // }
 
     .bg-fill {
-        @include media-breakpoint-only(lg) {
-            left: rem-calc(-40);
+        left: auto; // override
+        right: rem-calc(-40);
+        background: rgba(white, 0.71);
+
+        @include media-breakpoint-up(lg) {
+
         }
     }
 }

@@ -79,7 +79,7 @@
 .sidebox {
     padding: rem-calc(22);
     // margin-bottom: 2px;
-    background-color: #f0f0f1; //#e3e3e5; //#f0f0f1; //#e7e7e7;
+    background-color: #f0eeee; //#f0f0f1; //#e3e3e5; //#f0f0f1; //#e7e7e7; TODO: var this;
     color: $yiq-text-dark; //#393939;
 
     @include media-breakpoint-up(xl) {
@@ -92,7 +92,8 @@
         margin-left: rem-calc(-22);
         padding-left: rem-calc(22);
     	padding-bottom: rem-calc(20);
-    	border-bottom: 1px solid #d2d2d2;
+    	border-bottom: 1px solid darken(#f0eeee, 10%);
+        font-weight: $font-weight-bold;
 
         @include media-breakpoint-up(xl) {
             width: calc(100% + #{rem-calc(28*2)});
@@ -160,7 +161,7 @@
 
 .side-btn {
     padding: rem-calc(15 15 15 15);
-    background: #f0f0f1; //darken(#f0f0f1, 5%); //#d8d5d5;
+    background: #efeeee; // TODO: var this; //darken(#f0f0f1, 5%); //#d8d5d5;
     border: none;
     color: $yiq-text-dark;
     font-weight: $font-weight-normal;
@@ -179,7 +180,7 @@
     }
 
     &:hover {
-        background: darken(#f0f0f1, 10%);
+        background: darken(#efeeee, 3%);
         color: $yiq-text-dark;
     }
 }

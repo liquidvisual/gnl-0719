@@ -5,10 +5,17 @@ layout: base__page_sidebar_9x3
 {% assign posts = site.data.lorem_ipsum %}
 
 <!-- SECTION -->
-<section class="section pb-0 pb-lg-5">
+<section>
     <div class="row">
         {% for item in posts limit: 6 %}
-            <div class="col-md-6 col-xl-4 mb-4 mb-xl-5 wow fadeIn">
+
+            {% comment %}
+            <div class="col-md-6 col-xl-3 mb-4">
+                {% include components/cards/card.html flat="true" %}
+            </div>
+            {% endcomment %}
+
+            <div class="col-md-6 col-xl-4 mb-4 mb-xl-5">
 
                 <!-- CARD -->
                 <div class="card h-100 is-flat">
@@ -24,12 +31,16 @@ layout: base__page_sidebar_9x3
 
                         <!-- TITLE -->
                         <a href="{{ item.url }}">
-                            <h3 class="h4 card-title text-primary">{{ item.title }}</h3>
+                            <h3 class="h4 card-title font-weight-bolder text-body">
+                                {{ item.title }}
+                            </h3>
                         </a>
 
                         <!-- DATE -->
                         <small class="mb-3">
-                            <time class="text-uppercase mr-1" datetime="{{ item.date | date_to_xmlschema }}">{{ item.date }}</time>
+                            <time class="text-uppercase mr-1" datetime="{{ item.date | date_to_xmlschema }}">
+                                {{ item.date }}
+                            </time>
                         </small>
 
                         <!-- TEXT -->
@@ -37,11 +48,13 @@ layout: base__page_sidebar_9x3
                             {{ item.body | truncate: 150 }}
                         </div>
 
-                        <!-- BUTTON -->
+                        <!-- TEXT LINK -->
                         <p>
-                            <a href="{{ item.url }}" class="text-uppercase text-link">
-                                Read more <i class="fa fa-angle-right"></i>
-                            </a>
+                            <small>
+                                <a href="{{ item.url }}" class="text-uppercase text-link">
+                                    Read more <i class="fa fa-angle-right"></i>
+                                </a>
+                            </small>
                         </p>
 
                     </div>
@@ -50,40 +63,37 @@ layout: base__page_sidebar_9x3
             </div>
         {% endfor %}
     </div>
-
-    {% include components/navigation/pagination.html %}
 </section>
+
+{% include components/navigation/pagination.html %}
 
 {% contentfor sidebar %}
 
-    <!-- SECTION -->
-    <section class="section">
-
-        {% comment %}
+    {% if page.wysiwyg %}
         <!-- WYSIWYG -->
         <div class="wysiwyg mb-3 pb-1">
-            {{ content }}
+            {{ page.wysiwyg }}
         </div>
-        {% endcomment %}
+    {% endif %}
 
-        <!-- CATEGORIES -->
-        <div class="sidebox mb-4">
+    <!-- CATEGORIES -->
+    <div class="sidebox mb-4">
 
-            <!-- HEADING -->
-            <h3 class="sidebox-header h5 text-uppercase mb-4">
-                <i class="fa fa-align-left mr-1"></i>
-                Categories
-            </h3>
+        <!-- HEADING -->
+        <h3 class="sidebox-header h5 text-uppercase mb-4">
+            <i class="fa fa-align-left mr-1"></i>
+            Categories
+        </h3>
 
-            <!-- LIST -->
-            <div class="sidebox-body mb-2">
-                <ul class="list-categories block-grid-xs-1 block-grid-md-2 block-grid-lg-1">
-                    {% for item in site.data.blog_categories %}
-                        <li><a href="#"><span class="text">{{- item.title -}}</span><i class="fa fa-angle-right d-inline"></i></a></li>
-                    {% endfor %}
-                </ul>
-            </div>
-
+        <!-- LIST -->
+        <div class="sidebox-body mb-2">
+            <ul class="list-categories block-grid-xs-1 block-grid-md-2 block-grid-lg-1">
+                {% for item in site.data.blog_categories %}
+                    <li><a href="#"><span class="text">{{- item.title -}}</span><i class="fa fa-angle-right d-inline"></i></a></li>
+                {% endfor %}
+            </ul>
         </div>
-    </section>
+
+    </div>
+
 {% endcontentfor %}

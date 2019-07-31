@@ -5,7 +5,7 @@ layout: base__page_sidebar_9x3
 {% assign search_results = site.data.lorem_ipsum %}
 
 <!-- SEARCH RESULTS -->
-<section class="section">
+<section>
     <div class="container">
 
         <!-- SEARCH FORM -->
@@ -22,26 +22,46 @@ layout: base__page_sidebar_9x3
             </div>
         </div>
 
+        <!-- SPACER -->
         <div class="spacer mt-3 mb-5"></div>
 
         <!-- NO RESULTS FOUND -->
-        <p class="text-muted" hidden>Sorry, no results were found.</p>
+        <p class="text-muted" hidden>
+            Sorry, no results were found.
+        </p>
 
         <!-- SEARCH RESULTS -->
         {% for item in search_results limit: 5 %}
 
+            <!-- RESULT -->
             <article>
+
+                <!-- HEADING -->
                 <a href="{{ item.url }}">
-                    <h3 class="h4">{{ item.title }}</h3>
+                    <h3 class="h4">
+                        {{ item.title }}
+                    </h3>
                 </a>
 
                 <!-- TRUNCATE: 200 max chars -->
-                <p class="text-body mb-0">{{- item.body | truncate: 200 -}} <a href="{{ item.url }}" class="pl-2">Read more <i class="fa fa-angle-right"></i></a></p>
+                <p class="text-body mb-0">
+
+                    {{- item.body | truncate: 200 -}}
+
+                    <!-- LINK -->
+                    <a href="{{ item.url }}" class="pl-2">
+                        Read more <i class="fa fa-angle-right"></i>
+                    </a>
+                </p>
+
             </article>
 
+            <!-- DIVIDER -->
             <hr class="my-4">
+
         {% endfor %}
 
+        <!-- SPACER -->
         <div class="spacer mb-4"></div>
 
         {% include components/navigation/pagination.html %}

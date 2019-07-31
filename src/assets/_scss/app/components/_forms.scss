@@ -36,16 +36,16 @@ form[data-toggle="validator"] {
 }
 
 
-form:not(.global-search-form) .btn {
-	min-width: rem-calc(250);
-	font-size: rem-calc(17) !important;
-	color: white !important;
-	justify-content: center;
+// form:not(.global-search-form) .btn {
+// 	min-width: rem-calc(250);
+// 	font-size: rem-calc(17) !important;
+// 	color: white !important;
+// 	justify-content: center;
 
-	&.disabled {
-		cursor: not-allowed;
-	}
-}
+// 	&.disabled {
+// 		cursor: not-allowed;
+// 	}
+// }
 
 //-----------------------------------------------------------------
 // CAPTCHA BADGE

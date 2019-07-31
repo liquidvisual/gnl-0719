@@ -20,8 +20,8 @@
     <div class="lv-hero {{ options }}">
 
         <!-- HERO ITEMS -->
-        {% for item in slides | limit: 1 %}
-            <div class="lv-hero-item {{ item.options }} is-tinted">
+        {% for hero_item in slides | limit: 1 %}
+            <div class="lv-hero-item {{ hero_item.options }} is-tinted">
 
                 <!-- HERO SLIDER (OVERLAY BEHIND) -->
                 <div class="lv-hero-item-slider-wrapper has-fade-transition" data-hero-slider>
@@ -52,26 +52,26 @@
                         >
 
                         {% for item in slides %}
-                            <div class="lv-hero-item-slide" style="background-image: url('{{ item.image }}')">
+                            <div class="lv-hero-item-slide" style="background-image: url('{{ hero_item.image }}')">
 
-                                {% if item.scroll_prompt %}
+                                {% if hero_item.scroll_prompt %}
                                     <!-- SCROLL PROMPT -->
                                     <a class="lv-hero-scroll-prompt hidden-lg-down"><i class="fa fa-angle-down"></i></a>
                                 {% endif %}
 
-                                {% if item.youtube_id %}
+                                {% if hero_item.youtube_id %}
                                     {% include components/hero/hero__youtube_plugin.html %}
-                                {% elsif item.vimeo_id %}
+                                {% elsif hero_item.vimeo_id %}
                                     {% include components/hero/hero__vimeo_plugin.html %}
-                                {% elsif item.video %}
+                                {% elsif hero_item.video %}
                                     {% include components/hero/hero__html5_video_plugin.html %}
                                 {% endif %}
 
                                 {% comment %}
                                 <!-- PARALLAX (OPTIONAL) -->
-                                {% unless item.youtube_id or item.vimeo_id  %}
-                                    {% if item.image %}
-                                        {% include components/hero/hero__parallax_plugin.html image=item.image %}
+                                {% unless hero_item.youtube_id or hero_item.vimeo_id  %}
+                                    {% if hero_item.image %}
+                                        {% include components/hero/hero__parallax_plugin.html image=hero_item.image %}
                                     {% endif %}
                                 {% endunless  %}
                                 {% endcomment %}
@@ -82,48 +82,63 @@
                     </div>
                 </div> <!-- /.hero-item-slider-wrapper -->
 
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-7 col-lg-5 col-xl-12">
+                <!-- HERO CAPTION -->
+                <div class="lv-hero-item-caption animated fadeInLeftSubtle">
 
-                            <!-- HERO CAPTION -->
-                            <div class="lv-hero-item-caption animated fadeInLeftSubtle">
+                    <!-- CAPTION TOP -->
+                    <section class="section lv-hero-item-caption-top">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 col-xl-6">
 
-                                <!-- HEADER -->
-                                <h1 class="h2 text-uppercase mb-4">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            {{ page.title }}
-                                        </div>
-                                    </div>
-                                </h1>
+                                    <!-- HEADER -->
+                                    <h1 class="h2 text-uppercase mb-0">
+                                        {{ page.title }}
+                                    </h1>
 
-                                <div class="row">
-                                    <div class="col-md-5">
-                                        <p>We are leaders in criminal defence and professional misconduct cases, and are the lawyers of choice for those that want private legal representation of the highest quality and skill.</p>
-
-                                        <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo enim justo, rhoncus.</p>
-
-                                        <p>
-                                            <a class="btn btn-primary mr-2" href="">About <i class="fa fa-angle-right"></i></a>
-                                            <a class="btn btn-primary" href="">Meet Our Team <i class="fa fa-angle-right"></i></a>
-                                        </p>
-
-                                    </div>
                                 </div>
-
-
-                                <!-- LEAD -->
-                                <!-- <p class="h4 font-weight-normal"> -->
-                                    <!-- { { page.lead }} -->
-                                <!-- </p> -->
-
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </section>
 
-            </div>
+                    <!-- CAPTION BOTTOM (WHITE BG) -->
+                    <section class="section lv-hero-item-caption-bottom">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 col-xl-5 pr-lg-4">
+
+                                    <!-- WYSIWYG -->
+                                    <div class="wysiwyg text-body mb-3 pb-1">
+                                        {{ page.wysiwyg | markdownify }}
+                                    </div>
+
+                                    <!-- CTAS -->
+                                    <p class="mb-5">
+                                        <a class="btn btn-primary mr-2" href="/about/">About <i class="fa fa-angle-right"></i></a>
+                                        <a class="btn btn-primary" href="/team/">Meet Our Team <i class="fa fa-angle-right"></i></a>
+                                    </p>
+
+                                </div>
+                                <div class="col-lg-6 col-xl-7">
+
+                                    <!-- SIDEBAR -->
+                                    <aside class="sidebar ml-auto" style="max-width: 753px">
+
+                                        <!-- SIDE NAV  -->
+                                        <div class="side-nav mb-5">
+                                            {% assign subpages = site.data.sitemap['Services'].children %}
+                                            {% include components/navigation/nav.html data=subpages %}
+                                        </div>
+
+                                    </aside>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div> <!-- /.lv-hero-item-caption -->
+            </div> <!-- /.lv-hero-item -->
         {% endfor %}
 
     </div> <!-- /.lv-hero -->

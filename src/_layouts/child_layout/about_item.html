@@ -1,0 +1,18 @@
+---
+layout: base__page_sidebar_7x5_nav
+---
+
+<!-- LEAD -->
+<p class="lead mb-4">
+	{{ page.lead }}
+</p>
+
+<!-- WYSIWYG -->
+<div class="wysiwyg mb-4">
+	{{ content }}
+</div>
+
+{% contentfor content_additional %}
+	{% include sections/section_cta.html %}
+	{% include sections/section_blog_latest.html %}
+{% endcontentfor %}

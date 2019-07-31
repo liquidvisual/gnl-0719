@@ -2,6 +2,9 @@
 layout: child_layout/services
 title: Services
 permalink: /services/
+subpage_path:
+  - 'Services'
+
 hero_options:
 hero_image: /assets/img/content/backgrounds/bg-04.jpg
 lead: |

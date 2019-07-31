@@ -21,39 +21,41 @@
        <!-- NAME* -->
        <label class="form-group d-block">
            <!-- <p class="mb-2">Name<small class="asterisk">*</small></p> -->
-           <input class="form-control" name="Name" type="text" placeholder="NAME*" required>
+           <input class="form-control" name="Name" type="text" placeholder="Name*" required>
            <small class="error shake animated"><i class="fa fa-warning"></i>&nbsp; Your name is required.</small>
        </label>
 
         <!-- EMAIL* -->
         <label class="form-group d-block">
             <!-- <p class="mb-2">Email<small class="asterisk">*</small></p> -->
-            <input class="form-control" name="Email" type="email" placeholder="EMAIL*" required>
+            <input class="form-control" name="Email" type="email" placeholder="Email*" required>
             <small class="error shake animated"><i class="fa fa-warning"></i>&nbsp; A valid email is required.</small>
         </label>
 
         <!-- PHONE -->
         <label class="form-group d-block">
             <!-- <p class="mb-2">Phone</p> -->
-            <input class="form-control" name="Phone" type="text" placeholder="PHONE">
+            <input class="form-control" name="Phone" type="text" placeholder="Phone">
         </label>
 
         <!-- MESSAGE* -->
         <label class="form-group d-block">
             <!-- <p class="mb-3">Message<small class="asterisk">*</small></p> -->
-            <textarea class="form-control" name="Message" rows="6" placeholder="MESSAGE*" required></textarea>
+            <textarea class="form-control" name="Message" rows="6" placeholder="Message*" required></textarea>
             <small class="error shake animated"><i class="fa fa-warning"></i>&nbsp; Please write your message.</small>
         </label>
 
     </fieldset>
 
     <!-- * REQUIRED -->
-    <!-- <p class="float-right">
+    <p class="float-right">
         <small class="asterisk">*</small>
         <small class="text-muted" style="position: relative; top: -5px;">required</small>
-    </p> -->
+    </p>
 
     <!-- SUBMIT -->
-    <button type="submit" class="btn btn-primary float-right">Send</button>
+    <button type="submit" class="btn btn-primary">
+        Send <i class="fa fa-angle-right"></i>
+    </button>
 
 </form>

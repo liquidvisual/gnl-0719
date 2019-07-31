@@ -2,15 +2,18 @@
 layout: child_layout/services_item
 title: Criminal Defence
 permalink: /services/services-item/
+subpage_path:
+  - 'Services'
+  - 'Criminal Defence'
+
 hero_image: /assets/img/content/backgrounds/bg-09.jpg
 hero_options:
 breadcrumbs: true
-lead:
-side_video: false
+lead: |
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+
 theme: theme-dark-hero-caption
 ---
-
-## Main Heading
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
 

@@ -44,6 +44,14 @@
     }
 }
 
+// Eg. BACK button on small
+.is-short.is-minimal .lv-breadcrumb-wrapper .breadcrumb-item {
+    @include media-breakpoint-down(sm) {
+        font-size: $display2-size !important;
+        font-weight: $font-weight-normal;
+    }
+}
+
 //-----------------------------------------------------------------
 // CONTEXT
 //-----------------------------------------------------------------

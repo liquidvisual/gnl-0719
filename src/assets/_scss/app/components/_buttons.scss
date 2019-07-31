@@ -30,13 +30,17 @@ b, strong {
 
 .btn {
     // font-weight: 700;
+    font-weight: $font-weight-normal;
     text-transform: uppercase;
     color: white;
+    min-width: rem-calc(200);
+    padding: rem-calc(15 15 10 20);
 
     .fa-angle-right {
         position: relative;
-        top: -1px;
-        margin-left: rem-calc(15);
+        top: -3px;
+        // margin-left: rem-calc(15);
+        margin-left: auto;
         font-size: rem-calc(24);
         line-height: 0;
     }
@@ -52,13 +56,14 @@ b, strong {
 //-----------------------------------------------------------------
 
 .btn-download {
-    padding: rem-calc(8 15);
-    background-color: #f0f0f1; //#e6e6e6;
-    font-size: rem-calc(14);
-    color: $body-color;
+    padding: rem-calc(9 15);
+    background-color: #efeeee; // TODO: var this;
+    font-size: rem-calc(13);
+    font-weight: $font-weight-bold;
+    color: #838383 !important; // TODO: var this //$body-color;
 
     &:hover {
-        background-color: darken(#f0f0f1, 5%); //darken(#e6e6e6, 2%)
+        background-color: darken(#efeeee, 5%); //darken(#e6e6e6, 2%)
     }
 }
 
@@ -274,9 +279,9 @@ a:hover .btn-tile {
 // Used in sidebar--content_rich template only (accordion like)
 
 .btn-accordion { // adhoc, not reusable
-    background: #e3e3e5; //#efeff0;
+    background: #f0eeee; // TODO: var this; //#efeff0;
     text-transform: none;
-    font-size: rem-calc(16);
+    font-size: rem-calc(20);
     color: $body-color;
 
     i.fa {
@@ -285,7 +290,7 @@ a:hover .btn-tile {
     }
 
     &:hover {
-        background: darken(#efeff0, 3%);
+        background: darken(#f0eeee, 3%);
     }
 }
 
@@ -296,7 +301,7 @@ a:hover .btn-tile {
     line-height: 0;
     // line-height: 10px;
     text-align: center;
-    background: #efeff0;
+    background: #f0eeee;
     font-weight: $font-weight-bold;
     color: #b4b5b6;
     border-radius: 100%;

@@ -7,6 +7,8 @@ hero_image: /assets/img/content/backgrounds/bg-05.jpg
 hero_options: is-short is-minimal
 breadcrumbs: true
 breadcrumbs_text:
+lead: |
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu.
 ---
 
 In an early blog post we explained [what you needed to know before moving into a retirement village](#). This article provides more detail about the rights you have and need to be aware of before signing a retirement village contract.
@@ -24,26 +26,6 @@ Before entering into a retirement village, the operator is required to give you 
 7. any code of conduct applicable
 8. any other documents prescribed by the regulations (see [Retirement Villages Act 2016](#) )
 It is common for a retirement village operator to provide all of the above documents in one bundle or in a folder. Of those documents, the first two are often the most important.
-
-## The residence contract
-
-This is the contract which sets out all of your and the operator’s rights and obligations with respect to your occupation of the residence. The contract is required by law to contain certain information including:
-
-* details about the residence being occupied
-* the name and contact details of the operator
-* the right to cool-off
-* the right to occupy the residence
-* recurrent charges which you will be liable for
-* additional services and facilities available to residents of the retirement village and the costs associated with those services and facilities
-* the right to terminate the right to occupy and receive an exit entitlement
-* the operator’s dispute resolution policy
-details regarding who will be responsible for repairing or replacing the fixtures, fittings and furnishings in the residence
-
-## The disclosure statement in retirement village contracts
-
-The disclosure statement summarises key information contained in the residence contract, including all fees and charges, how the operator uses those fees and charges, any utilities, services or facilities provided by the operator and how the resident’s exit entitlement is calculated and paid.
-
-After entering into occupation of the residence, the operator is required to complete a premises condition report, which provides detailed information about the condition of the fixtures, fittings and furnishings, and any other information as prescribed by the law from time to time. Both the operator and yourself are required to sign the premises condition report.
 
 ## H2. Heading Lorem Ipsum
 

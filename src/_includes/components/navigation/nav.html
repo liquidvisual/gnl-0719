@@ -93,9 +93,28 @@
         </li>
     {% endfor %}
 
-    {% comment %}
     {% if forloop.index == null %}
 
+        <!-- CONTACT -->
+        <li class="is-off-canvas-only pt-3">
+
+            <!-- PHONE -->
+            <a href="tel:{{ qld_office.phone }}">
+                <i class="fa fa-phone"></i>&nbsp;
+                <span>{{ qld_office.phone }} (24 hours)</span>
+            </a>
+
+            <!-- EMAIL -->
+            <a href="mailto:{{ qld_office.email }}">
+                <i class="fa fa-envelope"></i>&nbsp;
+                <span>{{ qld_office.email }}</span>
+            </a>
+
+        </li>
+
+    {% endif %}
+
+    {% comment %}
         <!-- SOCIAL MEDIA -->
         <li class="is-off-canvas-only">
             {% include components/widgets/social_media.html preset=3 %}
@@ -105,7 +124,5 @@
         <li class="is-off-canvas-only">
             {% include components/forms/form_search.html %}
         </li>
-
-    {% endif %}
     {% endcomment %}
 </ul>

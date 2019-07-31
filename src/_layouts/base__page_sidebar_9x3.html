@@ -2,21 +2,29 @@
 layout: base
 ---
 
-<!-- MAIN BODY -->
-<main class="main-body">
+<!-- SECTION -->
+<section class="section">
 	<div class="container">
 	    <div class="row">
 	        <div class="col-lg-8 col-xl-9 pr-lg-5">
-	        	{{ content }}
+
+				{{ content }}
+
+				<!-- SPACER -->
+				<div class="spacer mb-4 mb-lg-0"></div>
+
 	        </div>
 	        <div class="col-lg-4 col-xl-3">
+
+	        	<!-- SIDEBAR -->
 				<aside class="sidebar">
 
 					{% contentblock sidebar no-convert %}
+
 				</aside>
 	        </div>
 	    </div>
 	</div>
+</section>
 
-	{% contentblock content_additional no-convert %}
-</main>
+{% contentblock content_additional no-convert %}

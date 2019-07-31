@@ -1,0 +1,40 @@
+---
+layout: base
+---
+
+{% assign level_1 = page.subpage_path[0] | default: page.title %}
+{% assign subpages = site.data.sitemap[level_1].children %}
+
+<!-- SECTION -->
+<section class="section">
+	<div class="container">
+	    <div class="row">
+	        <div class="col-lg-6 col-xl-5 pr-lg-4">
+
+				{{ content }}
+
+				<!-- SPACER -->
+				<div class="spacer mb-4 mb-lg-0"></div>
+
+	        </div>
+	        <div class="col-lg-6 col-xl-7">
+
+	        	<!-- SIDEBAR -->
+				<aside class="sidebar ml-auto" style="max-width: 753px">
+
+					{% if subpages %}
+						<!-- SIDE NAV  -->
+						<div class="side-nav mb-4">
+							{% include components/navigation/nav.html data=subpages %}
+						</div>
+					{% endif %}
+
+					{% contentblock sidebar no-convert %}
+
+				</aside>
+	        </div>
+	    </div>
+	</div>
+</section>
+
+{% contentblock content_additional no-convert %}

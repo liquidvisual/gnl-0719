@@ -104,7 +104,7 @@ $quaternary:    #5d5e5e !default;
 // $yiq-contrasted-threshold:  150 !default;
 
 // // Customize the light and dark text colors for use in our YIQ color contrast function.
-$yiq-text-dark:             #323332; //$gray-900 !default;
+$yiq-text-dark:             #181918; //#323332; //$gray-900 !default;
 // $yiq-text-light:            $white !default;
 
 
@@ -165,7 +165,7 @@ $spacer: rem-calc(20); //1rem !default;
 // // Settings for the `<body>` element.
 
 // $body-bg:                   $white !default;
-$body-color:                #151515; //#393a3a; //$gray-900 !default;
+$body-color:                $yiq-text-dark; //#323332; //#151515; //#393a3a; //$gray-900 !default;
 
 
 // // Links
@@ -327,7 +327,7 @@ $h6-font-size:                rem-calc(15); //$font-size-base !default;
 // $headings-font-family:        inherit !default;
 $headings-font-weight:        $font-weight-normal; //500 !default;
 // $headings-line-height:        1.2 !default;
-// $headings-color:              inherit !default;
+$headings-color:              inherit !default;
 
 $display1-size:               rem-calc(50); //rem-calc(48); //6rem !default;
 $display2-size:               rem-calc(34); //5.5rem !default;
@@ -345,7 +345,7 @@ $lead-font-weight:            $font-weight-normal; //300 !default;
 
 $small-font-size:             85%; //80% !default;
 
-// $text-muted:                  $gray-600 !default;
+$text-muted:                  #908e8e; //$gray-600 !default;
 
 // $blockquote-small-color:      $gray-600 !default;
 // $blockquote-small-font-size:  $small-font-size !default;
@@ -486,7 +486,7 @@ $input-padding-x:                       rem-calc(20); //$input-btn-padding-x !de
 // $input-font-size-lg:                    $input-btn-font-size-lg !default;
 // $input-line-height-lg:                  $input-btn-line-height-lg !default;
 
-$input-bg:                              white !default;
+$input-bg:                              #f0eeee; //white !default;
 // $input-disabled-bg:                     $gray-200 !default;
 
 // $input-color:                           $gray-700 !default;

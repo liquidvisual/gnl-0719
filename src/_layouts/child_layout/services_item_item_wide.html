@@ -1,0 +1,58 @@
+---
+layout: base__page_sidebar_9x3_wide
+---
+
+{% assign accordion = page.accordion %}
+
+<!-- SECTION -->
+<section class="mb-5">
+
+	<!-- LEAD -->
+	<p class="lead mb-4">
+		{{ page.lead }}
+	</p>
+
+	<!-- WYSIWYG -->
+	<div class="wysiwyg mb-4">
+		{{ content }}
+	</div>
+
+</section>
+
+<!-- 1/2. ACCORDION CONTENTS NAV -->
+<nav class="mb-5">
+	{% for item in accordion %}
+
+		<!-- CONTENTS ANCHOR -->
+		<div id="contents-{{ item.title | slugify }}">
+			<a class="font-weight-bold btn btn-block btn-hero btn-accordion" href="#{{ item.title | slugify }}" >
+				<span>{{ item.title }}</span>
+				<i class="fa fa-angle-down"></i>
+			</a>
+		</div>
+	{% endfor %}
+</nav>
+
+<!-- 2/2. ACCORDION CONTENTS -->
+{% for item in accordion %}
+	<section id="{{ item.title | slugify }}" class="wysiwyg mb-4 pb-1">
+
+		<!-- HEADING -->
+		<h2 class="d-flex font-weight-bold mb-3">
+			<span>{{ item.title }}</span>
+
+			<!-- BACK UP -->
+			<a href="#contents-{{ item.title | slugify }}" class="btn-up ml-auto">
+				<i class="fa fa-angle-up"></i>
+			</a>
+		</h2>
+
+		<!-- BODY -->
+		{{ item.body | markdownify }}
+	</section>
+{% endfor %}
+
+{% contentfor content_additional %}
+	{% include sections/section_cta.html %}
+	{% include sections/section_blog_latest.html title="Blog - Traffic" %}
+{% endcontentfor %}

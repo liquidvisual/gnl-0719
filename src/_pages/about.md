@@ -2,6 +2,9 @@
 layout: child_layout/about
 title: About
 permalink: /about/
+subpage_path:
+  - 'About'
+
 hero_image: /assets/img/content/backgrounds/bg-03.jpg
 hero_options:
 lead: |

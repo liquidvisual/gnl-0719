@@ -81,7 +81,7 @@
 				</span>
 				{% endcomment %}
 
-				<!-- SITEMAP -->
+				<!-- SITEMAP LINK (OPTIONAL) -->
 				<a class="mr-2" href="#sitemap" data-sitemap-trigger>
 					<i class="fa fa-angle-down"></i>
 					Site Map
@@ -110,15 +110,17 @@
     </div>
 </section>
 
-<!-- FOOTER SITEMAP -->
+<!-- FOOTER SITEMAP (OPTIONAL) -->
 <section id="sitemap" class="global-footer-sitemap is-collapsed" data-sitemap>
 	<div class="container">
-		<ul class="block-grid-xs-1 block-grid-lg-5">
+		<ul class="block-grid-xs-1 block-grid-md-3 block-grid-lg-5">
 
 			{% for item in site.data.sitemap offset: 1 %}
 				<li>
 					<a href="{{ item[1].url }}">
-						<h5>{{ item[0] }}</h5>
+						<h5 class="text-uppercase text-white">
+							{{ item[0] }}
+						</h5>
 					</a>
 					{% if item[1].children %}
 						<ul class="list-unstyled">

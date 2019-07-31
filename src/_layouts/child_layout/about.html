@@ -8,6 +8,11 @@ layout: base__page_sidebar_6x6_nav
 </p>
 
 <!-- WYSIWYG -->
-<div class="wysiwyg">
+<div class="wysiwyg mb-4">
 	{{ content }}
 </div>
+
+{% contentfor content_additional %}
+	{% include sections/section_cta.html %}
+	{% include sections/section_blog_latest.html %}
+{% endcontentfor %}

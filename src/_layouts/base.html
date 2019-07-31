@@ -15,11 +15,6 @@
     <!-- CDN -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,700&display=swap">
 
-    <!-- build:js({src,.}) /assets/scripts/vue.js -->
-    <script src="/node_modules/vue/dist/vue{% unless site.environment == 'development' %}.min{% endunless %}.js"></script>
-    <!-- endbuild -->
-    <script>Vue.config.productionTip = false;</script>
-
     <!-- build:css({src,.tmp}) /assets/css/minified.css -->
     <link rel="stylesheet" href="/css/main.css">
     <!-- endbuild -->
@@ -83,17 +78,20 @@
     <script src="/node_modules/headroom.js/dist/headroom.js"></script>
     <script src="/node_modules/jquery.scrollTo/jquery.scrollTo.js"></script>
     <script src="/node_modules/magnific-popup/dist/jquery.magnific-popup.js"></script>
-    <script src="/node_modules/scrollax/scrollax.js"></script>
     <script src="/assets/scripts/liquidvisual/equal-height.js"></script>
-    <script src="/assets/scripts/liquidvisual/gallery.js"></script>
     <script src="/assets/scripts/liquidvisual/headroom.js"></script>
     <script src="/assets/scripts/liquidvisual/hero-slider.js"></script>
     <script src="/assets/scripts/liquidvisual/off-canvas.js"></script>
     <script src="/assets/scripts/liquidvisual/responsive-utility.js"></script>
-    <script src="/assets/scripts/slider.js"></script>
-    <script src="/assets/scripts/vue-staff-app.js"></script>
     <script src="/assets/scripts/main.js"></script>
     <!-- endbuild -->
+
+    {% comment %}
+        <script src="/node_modules/scrollax/scrollax.js"></script>
+        <script src="/assets/scripts/liquidvisual/gallery.js"></script>
+        <script src="/assets/scripts/slider.js"></script>
+        <script src="/assets/scripts/vue-staff-app.js"></script>
+    {% endcomment %}
 
     <!-- NO JAVASCRIPT WARNING -->
     <noscript>

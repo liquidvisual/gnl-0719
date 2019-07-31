@@ -19,9 +19,13 @@
     }
 
     time {
-        color: #929191;
-        font-size: rem-calc(14); // what controls this?
+        color: #929191; // TODO: var this;
+        font-size: rem-calc(13); //14  what controls this?
         font-weight: $font-weight-bold;
+    }
+
+    .card-body {
+        padding: rem-calc(15 25);
     }
 
     &.is-flat {
@@ -38,6 +42,24 @@
         font-size: rem-calc(30);
         line-height: 0;
         color: #b0b9c5;
+    }
+
+    .btn { // ** NEW **
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: rem-calc(10 15 7 15);
+        min-width: rem-calc(150);
+        font-size: rem-calc(11);
+        font-weight: $font-weight-normal;
+        text-align: left;
+
+        .fa {
+            position: relative;
+            top: -2px;
+            font-size: rem-calc(16);
+            line-height: 1;
+        }
     }
 }
 

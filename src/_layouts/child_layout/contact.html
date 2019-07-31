@@ -1,28 +1,85 @@
 ---
-layout: base__page
+layout: base__page_sidebar_6x6_nav
 ---
 
 {% assign settings = site.data.settings %}
+{% assign item = settings.offices.qld[0] %}
 
 <!-- SECTION -->
-<section class="section">
-    <div class="container">
+<section>
+    <div class="row">
+        <div class="col-md-6">
 
-        <!-- HEADING -->
-        <h2 class="mb-md-4">
-            South Australia Offices
-        </h2>
+            <!-- PHONE -->
+            <p class="mb-3">
+                <a class="d-inline-flex align-items-center text-body" href="tel:{{ item.phone }}">
+                    <i class="text-primary fa fa-phone mr-3"></i>
+                    <span class="text">{{ item.phone }}</span>
+                </a>
+            </p>
 
-        <!-- OFFICES -->
-        <ul class="mb-0 block-grid-xs-1 block-grid-md-2 block-grid-lg-3">
-            {% for item in settings.offices['sa'] %}
-                <li class="wow fadeIn">
-                    {% include components/content/contact_box.html %}
-                </li>
-            {% endfor %}
-        </ul>
+            <!-- EMAIL -->
+            <p class="mb-3">
+                <a class="d-inline-flex align-items-center text-body" href="tel:{{ item.email }}">
+                    <i class="text-primary fa fa-envelope mr-3"></i>
+                    <span class="text">{{ item.email }}</span>
+                </a>
+            </p>
 
+            <!-- FAX -->
+            <p class="mb-5">
+                <a class="d-inline-flex align-items-center text-body" href="tel:{{ item.fax }}">
+                    <i class="text-primary fa fa-fax mr-3"></i>
+                    <span class="text">{{ item.fax }}</span>
+                </a>
+            </p>
+
+            <!-- HEADING -->
+            <h3 class="mb-4">
+                Street Address
+            </h3>
+
+            <!-- ADDRESS -->
+            <p class="mb-5">
+                <span class="d-inline-flex align-items-start">
+                    <i class="text-primary fa fa-map-marker mr-3"></i>
+                    <span class="text">
+                        {{ item.address }}
+                    </span>
+                </span>
+            </p>
+
+        </div>
+        <div class="col-md-6">
+
+            <!-- HEADING -->
+            <h3 class="mb-4">
+                Postal Address
+            </h3>
+
+            <!-- PO BOX -->
+            <p class="mb-3">
+                <span class="d-inline-flex align-items-start">
+                    <i class="text-primary fa fa-envelope-o mr-3"></i>
+                    <span class="text">{{ item.po_box }}</span>
+                </span>
+            </p>
+
+        </div>
     </div>
+
 </section>
 
-{% include sections/section_contact_centered.html %}
+{% contentfor sidebar %}
+
+    <!-- HEADING -->
+    <h3 class="mb-4">
+        Make an enquiry today
+    </h3>
+
+    {% include components/forms/form_contact.html %}
+{% endcontentfor %}
+
+{% contentfor content_additional %}
+    {% include components/widgets/google_map.html id="google-map" %}
+{% endcontentfor %}
