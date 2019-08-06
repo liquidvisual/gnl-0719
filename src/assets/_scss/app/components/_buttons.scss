@@ -34,11 +34,12 @@ b, strong {
     text-transform: uppercase;
     color: white;
     min-width: rem-calc(200);
-    padding: rem-calc(15 15 10 20);
+    // padding: rem-calc(15 15 10 20);
+    padding: rem-calc(13 20);
 
     .fa-angle-right {
         position: relative;
-        top: -3px;
+        top: -1px;
         // margin-left: rem-calc(15);
         margin-left: auto;
         font-size: rem-calc(24);
