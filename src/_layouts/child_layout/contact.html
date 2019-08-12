@@ -3,70 +3,86 @@ layout: base__page_sidebar_6x6_nav
 ---
 
 {% assign settings = site.data.settings %}
-{% assign item = settings.offices.qld[0] %}
+{% assign item_1 = settings.offices.qld[0] %}
+{% assign item_2 = settings.offices.qld[1] %}
 
 <!-- SECTION -->
 <section>
-    <div class="row">
-        <div class="col-md-6">
 
-            <!-- PHONE -->
-            <p class="mb-3">
-                <a class="d-inline-flex align-items-center text-body" href="tel:{{ item.phone }}">
-                    <i class="text-primary fa fa-phone mr-3"></i>
-                    <span class="text">{{ item.phone }}</span>
-                </a>
-            </p>
+    <!-- HEADING -->
+    <h3 class="mb-4">
+        Brisbane
+    </h3>
 
-            <!-- EMAIL -->
-            <p class="mb-3">
-                <a class="d-inline-flex align-items-center text-body" href="tel:{{ item.email }}">
-                    <i class="text-primary fa fa-envelope mr-3"></i>
-                    <span class="text">{{ item.email }}</span>
-                </a>
-            </p>
+    <!-- CONTACTS -->
+    <p class="mb-0">
 
-            <!-- FAX -->
-            <p class="mb-5">
-                <a class="d-inline-flex align-items-center text-body" href="tel:{{ item.fax }}">
-                    <i class="text-primary fa fa-fax mr-3"></i>
-                    <span class="text">{{ item.fax }}</span>
-                </a>
-            </p>
+        <!-- PHONE -->
+        <a class="d-inline-flex align-items-center text-body mr-4 mb-3" href="tel:{{ item_1.phone }}">
+            <i class="text-primary fa fa-phone fa-fw mr-1"></i>
+            <span class="text">{{ item_1.phone }} (24 hours)</span>
+        </a>
 
-            <!-- HEADING -->
-            <h3 class="mb-4">
-                Street Address
-            </h3>
+        <!-- EMAIL -->
+        <a class="d-inline-flex align-items-center text-body mr-4 mb-3" href="mailto:{{ item_1.email }}">
+            <i class="text-primary fa fa-envelope fa-fw mr-1"></i>
+            <span class="text">{{ item_1.email }}</span>
+        </a>
 
-            <!-- ADDRESS -->
-            <p class="mb-5">
-                <span class="d-inline-flex align-items-start">
-                    <i class="text-primary fa fa-map-marker mr-3"></i>
-                    <span class="text">
-                        {{ item.address }}
-                    </span>
-                </span>
-            </p>
+        <!-- FAX -->
+        <a class="d-inline-flex align-items-center text-body mb-3" href="tel:{{ item_1.fax }}">
+            <i class="text-primary fa fa-fax fa-fw mr-1"></i>
+            <span class="text">{{ item_1.fax }}</span>
+        </a>
+    </p>
 
-        </div>
-        <div class="col-md-6">
+    <!-- ADDRESS -->
+    <p class="mb-3">
+        <a class="d-inline-flex align-items-start text-body" href="{{ item_1.map }}" target="_blank">
+            <i class="text-primary fa fa-map-marker fa-fw mr-1"></i>
+            <span class="text">{{ item_1.address }}</span>
+        </a>
+    </p>
 
-            <!-- HEADING -->
-            <h3 class="mb-4">
-                Postal Address
-            </h3>
+    <!-- PO BOX -->
+    <p class="mb-5">
+        <a class="d-inline-flex align-items-start text-body" href="{{ item_1.map }}">
+            <i class="text-primary fa fa-envelope-o fa-fw mr-1"></i>
+            <span class="text">PO Box 12215, George Street Post Shop, Brisbane QLD 4003</span>
+        </a>
+    </p>
 
-            <!-- PO BOX -->
-            <p class="mb-3">
-                <span class="d-inline-flex align-items-start">
-                    <i class="text-primary fa fa-envelope-o mr-3"></i>
-                    <span class="text">{{ item.po_box }}</span>
-                </span>
-            </p>
+    <!-- HEADING -->
+    <h3 class="mb-4">
+        Caboolture (by appt)
+    </h3>
 
-        </div>
-    </div>
+    <!-- CONTACTS -->
+    <p class="mb-3">
+
+        <!-- PHONE -->
+        <a class="d-inline-flex align-items-center text-body mr-4" href="tel:{{ item_1.phone }}">
+            <i class="text-primary fa fa-phone fa-fw mr-1"></i>
+            <span class="text">{{ item_2.phone }} (24 hours)</span>
+        </a>
+
+        <!-- EMAIL -->
+        <a class="d-inline-flex align-items-center text-body mr-4" href="mailto:{{ item_1.email }}">
+            <i class="text-primary fa fa-envelope fa-fw mr-1"></i>
+            <span class="text">{{ item_2.email }}</span>
+        </a>
+
+    </p>
+
+    <!-- ADDRESS -->
+    <p class="mb-5">
+        <span class="d-inline-flex align-items-start">
+            <i class="text-primary fa fa-map-marker mr-3"></i>
+            <span class="text">
+                {{ item_2.address }}
+            </span>
+        </span>
+    </p>
 
 </section>
 

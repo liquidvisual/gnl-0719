@@ -23,12 +23,23 @@ offices:
 
   qld:
     - city: Brisbane
-      email: gn@gnl.com.au
+      email: gnl@gnl.com.au
       phone: 07 3361 0222
       fax: 07 3361 0201
-      address: Level 9,<br> 15 Adelaide Street<br> Brisbane<br> Qld 4000
-      po_box: PO Box 12215<br> George Street Post Shop<br> Brisbane Qld 4003
+      address: Level 9, 15 Adelaide Street, Brisbane QLD 4000
+      po_box: PO Box 12215<br> George Street Post Shop<br> Brisbane QLD 4003
       head_office: true
+      map: https://www.google.com/maps/place/Gilshenan+%26+Luton+Legal+Practice/@-27.4701687,153.0210849,17z/data=!3m1!4b1!4m5!3m4!1s0x6b915a0461014dd7:0x6605c746cbd55430!8m2!3d-27.4701735!4d153.0232736
+
+    - city: Caboolture (by appt)
+      email: gnl@gnl.com.au
+      phone: 07 3361 0222
+      fax:
+      address: Suite 4, Upper Level, 3 Annie Street, Caboolture QLD 4510
+      po_box:
+      head_office: false
+      map: https://www.google.com/maps/place/Fowler+Lawyers/@-27.082608,152.9480373,17z/data=!3m1!4b1!4m5!3m4!1s0x6b93f3c6ce905421:0xa3b01a83a459477a!8m2!3d-27.082608!4d152.950226
+
 
 # GOOGLE
 google_analytics: #UA-XXXXXXXX-X

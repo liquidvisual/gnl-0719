@@ -30,7 +30,7 @@
 		text-align: center;
 		color: white !important;
 		transition: opacity 200ms ease;
-		// border-radius: 100%; //$border-radius;
+		border-radius: 100%; //$border-radius;
 
 		&:hover {
 			// transform: scale(0.9);
@@ -100,7 +100,14 @@
 	font-size: rem-calc(24); // [LOCKED] - override
 
 	@include media-breakpoint-up(md) {
-	    margin: rem-calc(0 0 0 10);
+	    margin: rem-calc(0 0 0 9);
+	}
+}
+
+
+.global-footer .social-media > a:first-child {
+	@include media-breakpoint-up(md) {
+	    margin-left: 0;
 	}
 }
 

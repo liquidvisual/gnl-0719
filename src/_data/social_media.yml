@@ -11,10 +11,6 @@
 #   url: '#'
 #   icon: fa fa-dribbble
 
-# - title: Facebook
-#   url: http://www.facebook.com/andersonssolicitors
-#   icon: fa fa-facebook
-
 # - title: Flickr
 #   url: '#'
 #   icon: fa fa-flickr
@@ -31,9 +27,13 @@
 #   url: '#'
 #   icon: fa fa-instagram
 
-# - title: LinkedIn
-#   url: https://au.linkedin.com/company/andersons-solicitors_2
-#   icon: fa fa-linkedin
+- title: LinkedIn
+  url: https://www.linkedin.com/company/gilshenan-&-luton-lawyers
+  icon: fa fa-linkedin
+
+- title: Facebook
+  url: https://www.facebook.com/GilshenanAndLuton
+  icon: fa fa-facebook
 
 # - title: Pinterest
 #   url: '#'

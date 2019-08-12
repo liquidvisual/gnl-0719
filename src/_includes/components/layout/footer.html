@@ -1,6 +1,7 @@
 {% assign settings = site.data.settings %}
 {% assign logo = page.logo | default: "/assets/img/content/logo--white@2x.png" %}
-{% assign qld_office = settings.offices['qld'][0] %}
+{% assign brisbane_office = settings.offices['qld'][0] %}
+{% assign caboolture_office = settings.offices['qld'][1] %}
 {% assign sitemap = site.data.sitemap %}
 
 <!-- FOOTER BODY -->
@@ -10,39 +11,50 @@
 			<div class="col-md-4 col-lg-3">
 
 				<!-- LOGO -->
-				<div class="mb-5 mb-md-0">
+				<div class="mb-4">
 					<a class="logo d-inline-block" href="/" title="{{ settings.title_homepage }}" itemprop="url">
 					    <img width="100%" src="{{ logo }}" alt="{{ settings.company }}" itemprop="logo">
 					</a>
 				</div>
 
 			</div>
-			<div class="col-md-8 col-lg-9">
+			<div class="col-md-6 col-lg-7">
 
 				<!-- PHONE -->
 				<p class="mb-1">
-                    <a class="d-inline-flex align-items-center" href="tel:{{ qld_office.phone }}">
+                    <a class="d-inline-flex align-items-center" href="tel:{{ brisbane_office.phone }}">
                         <i class="fa fa-phone mr-2"></i>
-                        <span class="text">{{ qld_office.phone }} (24 hours)</span>
+                        <span class="text">{{ brisbane_office.phone }} (24 hours)</span>
                     </a>
                 </p>
 
 				<!-- EMAIL -->
 				<p class="mb-1">
-                    <a class="d-inline-flex align-items-center" href="mailto:{{ qld_office.email }}">
+                    <a class="d-inline-flex align-items-center" href="mailto:{{ brisbane_office.email }}">
                         <i class="fa fa-envelope mr-2"></i>
-                        <span class="text">{{ qld_office.email }}</span>
+                        <span class="text">{{ brisbane_office.email }}</span>
                     </a>
                 </p>
 
-				<!-- ADDRESS -->
-				<p class="mb-3 mb-md-0">
-					<a class="d-inline-flex align-items-start" href="/contact/">
+				<!-- ADDRESS #1 -->
+				<p class="mb-1">
+					<a class="d-inline-flex align-items-start" target="_blank" href="{{ brisbane_office.map }}">
                         <i class="fa fa-map-marker mr-2"></i>
-                        <span class="text"><span class="mr-1">{{ qld_office.address | strip_html }}</span><i class="d-inline fa fa-angle-right"></i></span>
+                        <span class="text"><span class="mr-1">{{ brisbane_office.city }} - {{ brisbane_office.address | strip_html }}</span><i class="d-inline fa fa-angle-right"></i></span>
                     </a>
                 </p>
 
+				<!-- ADDRESS #2 -->
+				<p class="mb-3 mb-md-0">
+					<a class="d-inline-flex align-items-start" target="_blank" href="{{ caboolture_office.map }}">
+						<i class="fa fa-map-marker mr-2"></i>
+						<span class="text"><span class="mr-1">{{ caboolture_office.city }} - {{ caboolture_office.address | strip_html }}</span><i class="d-inline fa fa-angle-right"></i></span>
+					</a>
+				</p>
+
+			</div>
+			<div class="col-md-2 d-flex justify-content-md-end">
+				{% include components/widgets/social_media.html %}
 			</div>
 		</div>
 
