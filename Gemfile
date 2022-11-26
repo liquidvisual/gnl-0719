@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem 'jekyll', '~>3.8.5'
+gem 'jekyll', '~>4.2.2'
 
 # jekyll plugins
 gem 'jekyll-sitemap'

@@ -1,8 +1,10 @@
 /*
-    NAV.CSS *NEW*
+    NAV.CSS
 
-    - updated: 31.07.19, 03.07.19, 14.06.19, 16.04.18
-    - liquidvisual.com
+    - Notes:
+        * adds nested dropdown alignment detail from Jono's custom.
+
+    - updated: 18.08.22, 31.07.19, 03.07.19, 14.06.19, 16.04.18
 */
 //-----------------------------------------------------------------
 // VARIABLES
@@ -192,6 +194,11 @@
 .lv-nav .dropdown .dropdown {
     top: 0;
     left: -100%;
+
+    // from Jono's custom
+    @media (min-width: 1670px) {
+        left: 100%;
+    }
 }
 
 //-----------------------------------------------------------------
@@ -202,6 +209,12 @@
 .lv-nav .is-right-aligned .dropdown {
     right: 0;
     left: auto;
+}
+
+// override nested dropdown
+.lv-nav .dropdown .is-right-aligned .dropdown {
+    right: auto;
+    left: -100%;
 }
 
 .lv-nav .dropdown.is-nav-included {
